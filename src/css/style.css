@@ -1,5 +1,22 @@
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url("../fonts/MuseoSansCyrillic/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrillic/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrillic/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrillic/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSansCyrillic/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrillic/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrillic/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrillic/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
 }
 
 img {
@@ -62,7 +79,6 @@ img {
           align-items: center;
   text-align: right;
   font-size: 13px;
-  font-weight: 400;
 }
 
 .navbar__address {
@@ -76,17 +92,19 @@ img {
 }
 
 .navbar__button {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
   margin-left: 30px;
   font-size: 13px;
-  font-weight: 400;
 }
 
 .navbar__phone {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
   display: inline-block;
   margin-top: 9px;
   color: #333333;
   font-size: 20px;
-  font-weight: 400;
   text-decoration: none;
 }
 
@@ -116,6 +134,7 @@ img {
 }
 
 .hero {
+  background-color: #f5f5f5;
   padding: 50px 0;
 }
 
@@ -132,6 +151,8 @@ img {
 }
 
 .hero-text__title {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
   font-size: 41px;
   font-weight: 800;
   line-height: 55px;
@@ -139,6 +160,8 @@ img {
 }
 
 .hero-text__subtitle {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
   display: inline-block;
   font-size: 20px;
   font-weight: 500;
@@ -214,6 +237,15 @@ img {
   }
   .hero-list__image {
     margin-right: 15px;
+  }
+}
+
+@media (max-width: 395px) {
+  .hero-text__subtitle {
+    width: 192px;
+  }
+  .hero-text__title {
+    font-size: 21px;
   }
 }
 /*# sourceMappingURL=style.css.map */
