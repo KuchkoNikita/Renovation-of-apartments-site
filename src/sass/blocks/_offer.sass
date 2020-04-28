@@ -15,6 +15,17 @@
         padding-right: 90px
         width: 50%
         position: relative
+    &-feedback
+        margin-top: 30px
+        display: flex
+        justify-content: space-between
+    &__text
+        font-size: 15px
+        line-height: 24px
+        &:not(:last-child)
+            margin-right: 70px
+    &__phone
+        display: inline-block
     &__title
         max-width: 365px
         line-height: 35px
@@ -38,9 +49,24 @@
             margin-bottom: 10px
         &__button
             font-size: 13px
+        &-feedback
+            display: block
+        &__text
+            display: inline-block
+            &:not(:last-child)
+                margin-right: 0px
+            &:not(:first-child)
+                margin-top: 18px
 @media (max-width: 768px)
     .offer
+        padding: 50px 0
         background: #ffffff
         &-block
             width: 100%
             padding-right: 0
+        &__title
+            line-height: 1.1
+            font-size: 18px
+            max-width: 85%
+        &__subtitle
+            font-size: 14px
