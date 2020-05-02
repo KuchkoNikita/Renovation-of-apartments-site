@@ -29,8 +29,10 @@ img
 .section 
     padding: 90px 0
     &-title
+        max-width: 500px
         font-size: 24px
         +bold
+        text-align: center
     &-subtitle
         display: block
         font-size: 16px
@@ -46,3 +48,7 @@ img
     +bold
     color: $text-color
     text-decoration: none
+.arrows 
+    &__left, &__right
+        &:hover
+            cursor: pointer
