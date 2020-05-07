@@ -1,0 +1,37 @@
+.job
+    &-list
+        display: flex
+        justify-content: space-between
+        &__item
+            max-width: 370px
+            height: 410px
+            background-color: $bg-color
+
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__text
+            display: block
+            margin: 23px 25px
+            max-width: 290px
+            font-size: 16px
+            line-height: 23px
+@media (max-width: 1200px)
+    .job
+        padding-top: 40px 
+        padding-bottom: 0
+        &-list
+            display: flex
+            flex-direction: column-reverse
+            &__item
+                margin: 0 auto
+                margin-bottom: 30px
+@media (max-width: 768px)
+    .job
+        &-list
+            &__item
+                max-width: 272px
+                max-height: 300px
+            &__text
+                font-size: 12px
+                line-height: 16.83px
