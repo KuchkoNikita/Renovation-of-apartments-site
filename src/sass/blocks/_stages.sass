@@ -1,0 +1,75 @@
+.stages
+    padding-top: 60px 
+    &__title
+        max-width: 780px
+        font-size: 30px
+        margin: auto
+        margin-bottom: 59px
+    &__subtitle
+        text-align: center
+        font-size: 20px
+        margin-bottom: 69px
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__img
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        border: 3px solid $main-color
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 30px
+    &__text
+        text-align: center
+        display: block
+        max-width: 180px
+        margin: auto
+        font-size: 14px
+        line-height: 20px
+        +bold
+    &__arrow
+        height: 200px
+    &__item
+        flex-basis: 20%
+        align-items: center
+        height: 200px
+    
+@media (max-width: 1200px)
+    .stages
+        &__arrow
+            display: none
+        &__text
+            max-width: 160px
+        &__text
+            font-size: 12px
+        &__row
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+        &__item
+            margin-bottom: 30px
+            flex-basis: 50%
+@media (max-width: 768px)
+    .stages
+        padding-top: 25px
+        padding-bottom: 75px
+        &__row
+            display: flex
+            flex-direction: column    
+        &__item
+            margin-bottom: 30px
+        &__img
+            margin-bottom: 22px
+        &__text
+            max-width: 180px
+        &__title
+            width: 243px
+            font-size: 18px
+            margin-bottom: 27px
+        &__subtitle
+            font-size: 14px
+            margin-bottom: 34px
