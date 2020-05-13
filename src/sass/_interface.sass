@@ -17,9 +17,20 @@ img
     .section
         padding-top: 60px
         padding-bottom: 60px
+    .button
+        &:hover
+            background-color: none !important
+            cursor: none !important
+    .arrows 
+        &__left, &__right
+            &:hover
+                cursor: none !important
+
+
 @media (max-width: 567px)
     .container
         max-width: 380px
+
 .button 
     +bold
     border-radius: 10px
@@ -29,6 +40,8 @@ img
     &:hover
         background-color: lighten($main-color, 10%)
         cursor: pointer
+    &:active, &:focus 
+        outline: none
 .section 
     padding: 90px 0
     &-title

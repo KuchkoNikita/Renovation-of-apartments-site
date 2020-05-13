@@ -75,4 +75,12 @@
             margin-right: auto
             margin-left: auto
             margin-bottom: 30px
-
+    .card
+        &:hover
+            box-shadow: none !important
+            .card__image::before
+                opacity: none !important
+        &__link
+            &:hover
+                &:after
+                    height: 3px
