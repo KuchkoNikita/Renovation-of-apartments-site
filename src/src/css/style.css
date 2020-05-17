@@ -1081,13 +1081,6 @@ template {
   min-height: 70px;
 }
 
-.offer__status {
-  margin-top: 10px;
-  text-align: center;
-  font-family: 'Museo Sans Bold', sans-serif;
-  font-weight: 700;
-}
-
 @media (max-width: 1200px) {
   .offer {
     background-size: cover;
@@ -1208,14 +1201,7 @@ template {
   padding: 25px;
 }
 
-.modal-form__status {
-  margin-top: 12px;
-  text-align: center;
-  font-family: 'Museo Sans Bold', sans-serif;
-  font-weight: 700;
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .modal-dialog {
     min-width: 240px;
     margin-top: 15%;
@@ -1233,22 +1219,15 @@ template {
     padding: 15px;
     border-radius: 5px;
   }
-  .modal-form__status {
-    font-size: 14px;
-  }
+}
+
+@media (max-width: 768px) {
   .modal-dialog {
     min-width: 240px;
     margin-top: 20%;
-    width: 60%;
   }
   .modal-dialog__title {
     font-size: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .modal-dialog {
-    width: 80%;
   }
 }
 
@@ -1690,13 +1669,6 @@ template {
       flex-basis: 50%;
   padding-left: 200px;
   text-align: center;
-}
-
-.brif__status {
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: 'Museo Sans Bold', sans-serif;
-  font-weight: 700;
 }
 
 .brif__input {

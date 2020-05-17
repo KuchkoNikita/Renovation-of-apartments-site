@@ -76,10 +76,11 @@
                     <!-- /.section-title -->
                     <span class="section-subtitle offer__subtitle wow fadeInLeft" data-wow-delay="0.2s">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
                     <!-- /.section-subtitle -->
-                    <form action="#" class="form offer__form" if="offer-form" onsubmit="ym(101263039, 'reachGoal', 'form-submission'); return true;">
+                    <form action="#" class="form offer__form" id="offer-form" onsubmit="ym(101263039, 'reachGoal', 'form-submission'); return true;">
                         <input type="text" name="username" class="input offer__input username  wow fadeInLeft " placeholder="Ваше имя" data-wow-delay="0.3s">
                         <input type="tel" name="phone" class="input offer__input phone wow fadeInLeft" placeholder="Ваш телефон" data-wow-delay="0.4s">
                         <button class="button offer__button wow fadeInLeft" data-wow-delay="0.5s">Получить бесплатный дизайн&nbsp-&nbspпроект</button>
+                        <div class="form-status offer__status"></div>
                     </form>
                     <!-- /.form offer__form -->
                     <div class="offer-feedback">
@@ -357,6 +358,7 @@
                             <input type="text" name="phone" class="input brif__input phone wow fadeInRight" placeholder="Ваш телефон" data-wow-delay="0.3s">
                             <button class="button brif__button wow fadeInRight" data-wow-delay="0.4s">Рассчитать стоимость</button>
                             <!-- /.button brif__button -->
+                            <div class="form-status brif__status"></div>
                             <span class="form__description wow fadeInRight" data-wow-delay="0.5s">Мы перезвоним Вам в&nbspтечение 60 секунд</span>
                         </form>
                     </div>
@@ -428,6 +430,7 @@
                     <input type="text" name="username" class="input modal-form__input" placeholder="Ваше имя">
                     <input type="tel" name="phone" class="input modal-form__input phone" placeholder="Ваш телефон">
                     <button class="button modal-form__button">Отправить</button>
+                    <div class="form-status modal-form__status"></div>
                 </form>
             </div>
         </div>

@@ -46,7 +46,11 @@
     &__button 
       width: 100%
       padding: 25px
-@media (max-width: 992px)
+    &__status
+      margin-top: 12px
+      text-align: center
+      +bold
+@media (max-width: 1200px)
   .modal
     &-dialog
       min-width: 240px
@@ -62,11 +66,16 @@
       &__button
         padding: 15px
         border-radius: 5px
-@media (max-width: 768px)
-  .modal
+      &__status
+        font-size: 14px
     &-dialog
       min-width: 240px
       margin-top: 20%
+      width: 60%
       &__title
         font-size: 20px
+@media (max-width: 576px)
+  .modal
+    &-dialog
+      width: 80%
     
