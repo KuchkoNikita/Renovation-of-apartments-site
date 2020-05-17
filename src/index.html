@@ -21,7 +21,7 @@
                         <a href="tel:+7 (495) 42-251-31" class="navbar__phone phone">+7 (495) 42-251-31</a>
                     </div>
                     <!-- /.navbar__contacts -->
-                    <button class="button navbar__button wow fadeIn" data-wow-delay="0.1s" onclick="ym(62609632,'reachGoal','button')">Перезвоните мне</button>
+                    <button id="open-modal-btn" class="button navbar__button wow fadeIn" data-wow-delay="0.1s" onclick="ym(62609632,'reachGoal','button')">Перезвоните мне</button>
                 </div>
                 <!-- /.navbar__info -->
             </div>
@@ -76,7 +76,7 @@
                     <!-- /.section-title -->
                     <span class="section-subtitle offer__subtitle wow fadeInLeft" data-wow-delay="0.2s">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
                     <!-- /.section-subtitle -->
-                    <form action="./php/telegram.php" class="form offer__form" if="offer-form" onsubmit="ym(101263039, 'reachGoal', 'form-submission'); return true;">
+                    <form action="#" class="form offer__form" if="offer-form" onsubmit="ym(101263039, 'reachGoal', 'form-submission'); return true;">
                         <input type="text" name="username" class="input offer__input username  wow fadeInLeft " placeholder="Ваше имя" data-wow-delay="0.3s">
                         <input type="tel" name="phone" class="input offer__input phone wow fadeInLeft" placeholder="Ваш телефон" data-wow-delay="0.4s">
                         <button class="button offer__button wow fadeInLeft" data-wow-delay="0.5s">Получить бесплатный дизайн&nbsp-&nbspпроект</button>
@@ -352,7 +352,7 @@
                     <div action="#" class="form brif__form">
                         <h3 class="form__title wow fadeInRight">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
                         <span class="form__subtitle wow fadeInRight" data-wow-delay="0.1s">Для этого заполните форму ниже</span>
-                        <form action="./php/telegram.php" class="brif-form form" id="brif-form">
+                        <form action="#" class="brif-form form" id="brif-form">
                             <input type="text" name="username" class="input brif__input username wow fadeInRight" placeholder="Ваше имя" data-wow-delay="0.2s">
                             <input type="text" name="phone" class="input brif__input phone wow fadeInRight" placeholder="Ваш телефон" data-wow-delay="0.3s">
                             <button class="button brif__button wow fadeInRight" data-wow-delay="0.4s">Рассчитать стоимость</button>
@@ -421,18 +421,20 @@
     <!-- /.footer -->
     <div class="modal">
         <div class="modal-dialog">
-            <div class="modal-dialog__header">
-                <button class="modal-dialog__close">&times;</button>
+            <div id="close-btn" class="modal-dialog__close">&times;</div>
+            <div class="modal-block">
+                <h4 class="modal-dialog__title">Заказать звонок</h4>
+                <form action="#" class="modal-form form" id="modal-form">
+                    <input type="text" name="username" class="input modal-form__input" placeholder="Ваше имя">
+                    <input type="tel" name="phone" class="input modal-form__input phone" placeholder="Ваш телефон">
+                    <button class="button modal-form__button">Отправить</button>
+                </form>
             </div>
-            <form action="./php/telegram.php" class="modal-form form" id="modal-form">
-                <input type="text" name="username" class="input modal-form__input" placeholder="Ваше имя">
-                <input type="tel" name="phone" class="input modal-form__input phone" placeholder="Ваш телефон">
-                <button class="button modal-form__button">Отправить</button>
-            </form>
         </div>
         <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
+
     <script src="./JavaScript/jquery-3.5.0.min.js"></script>
     <script src="./JavaScript/slick.min.js"></script>
     <script src="./JavaScript/wow.min.js"></script>
