@@ -29,7 +29,7 @@ $(document).ready(function(){
         $('#brif-form').validate({
             rules: {
                 username: {
-                    required: true,
+                    required: false,
                     minlength: 2,
                     maxlength: 18,
                 },
@@ -50,10 +50,10 @@ $(document).ready(function(){
                 },
             }
         });
-        $('.offer__form').validate({
+        $('#offer-form').validate({
             rules: {
                 username: {
-                    required: true,
+                    required: false,
                     minlength: 2,
                     maxlength: 18,
                 },
@@ -77,7 +77,7 @@ $(document).ready(function(){
         $('#modal-form').validate({
             rules: {
                 username: {
-                    required: true,
+                    required: false,
                     minlength: 2,
                     maxlength: 18,
                 },
@@ -122,47 +122,77 @@ $(document).ready(function(){
     modal();
 
     function sendForm () {
+        function clearInputs (form) {
+            setTimeout(function() {
+                form[0].reset();
+                form.find('.form-status').html('');
+            }, 5000);
+        }
+
+        function closeModal () {
+            setTimeout(function() {
+                $('.modal').removeClass('modal-active');
+            }, 5000);
+        }
+
         $('#offer-form').on('submit', function(event) {
             event.preventDefault();
+            $('.offer__status').html('Загрузка...');
             $.ajax({
                 type: "POST",
                 url: "../php/main.php",
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(msg){
+                    $('.offer__status').html('Ваша форма отправленна');
+                    clearInputs($('#offer-form'));
                     console.log(msg);
                 }, 
                 error: function(jqXHR, textStatus) {
+                    $('.offer__status').html('Ваша форма не отправленна');
+                    clearInputs($('#offer-form'));
                     console.log(jqXHR + ": " + textStatus);
                 },
               });
         });
         $('#brif-form').on('submit', function(event) {
             event.preventDefault();
+            $('.offer__status').html('Загрузка...');
             $.ajax({
                 type: "POST",
                 url: "../php/main.php",
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(msg){
+                    $('.brif__status').html('Ваша форма отправленна');
+                    clearInputs($('#brif-form'));
                     console.log(msg);
                 }, 
                 error: function(jqXHR, textStatus) {
+                    $('.brif__status').html('Ваша форма не отправленна');
+                    clearInputs($('#brif-form'));
                     console.log(jqXHR + ": " + textStatus);
                 },
               });
         });
         $('#modal-form').on('submit', function(event) {
             event.preventDefault();
+            $('.offer__status').html('Загрузка...');
             $.ajax({
                 type: "POST",
                 url: "../php/main.php",
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(msg){
+                    $('.modal-form__status').html('Ваша форма отправленна');
+                    clearInputs($('#modal-form'));
+                    closeModal();
                     console.log(msg);
                 }, 
                 error: function(jqXHR, textStatus) {
+                    $('.modal-form__status').html('Ваша форма не отправленна');
+                    clearInputs($('#modal-form'));
+                    closeModal();
                     console.log(jqXHR + ": " + textStatus);
                 },
               });
