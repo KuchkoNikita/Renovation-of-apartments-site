@@ -140,7 +140,7 @@ $(document).ready(function(){
             $('.offer__status').html('Загрузка...');
             $.ajax({
                 type: "POST",
-                url: "../php/main.php",
+                url: "./php/main.php",
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(msg){
@@ -160,7 +160,7 @@ $(document).ready(function(){
             $('.offer__status').html('Загрузка...');
             $.ajax({
                 type: "POST",
-                url: "../php/main.php",
+                url: "./php/main.php",
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(msg){
@@ -180,7 +180,7 @@ $(document).ready(function(){
             $('.offer__status').html('Загрузка...');
             $.ajax({
                 type: "POST",
-                url: "../php/main.php",
+                url: "./php/main.php",
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(msg){
